@@ -215,7 +215,7 @@ ul {
 }
 
 .header.scrolled {
-    padding: 10px 0;
+    padding: 5px 0;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
@@ -223,7 +223,7 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80px;
+    min-height: 55px;
 }
 
 .logo {
