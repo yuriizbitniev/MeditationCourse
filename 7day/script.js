@@ -154,4 +154,54 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.addEventListener('touchend', resetAutoplay, { passive: true });
     }
 
+    /* --- 6. Таймер обратного отсчета для видео --- */
+    const timerElement = document.getElementById('timer-time');
+    if (timerElement) {
+        const THIRTY_MINUTES = 30 * 60 * 1000;
+        let endTime = localStorage.getItem('videoTimerEndTime');
+        const now = new Date().getTime();
+
+        if (!endTime || now > parseInt(endTime)) {
+            endTime = now + THIRTY_MINUTES;
+            localStorage.setItem('videoTimerEndTime', endTime);
+        }
+
+        const updateTimer = () => {
+            const currentTime = new Date().getTime();
+            const distance = parseInt(endTime) - currentTime;
+
+            const delayedButtonWrapper = document.getElementById('delayed-button-wrapper');
+            // Показываем кнопку, если прошло 5 минут (осталось 25 минут или меньше)
+            if (delayedButtonWrapper && distance <= 25 * 60 * 1000) {
+                delayedButtonWrapper.style.display = 'block';
+            }
+
+            if (distance <= 0) {
+                clearInterval(timerInterval);
+                timerElement.innerText = "00:00";
+                
+                const videoTimerContainer = document.getElementById('video-timer');
+                if (videoTimerContainer) {
+                    videoTimerContainer.innerHTML = "Доступ к бесплатному видео закрыт.";
+                }
+                const videoWrapper = document.querySelector('.video-wrapper');
+                if (videoWrapper) {
+                    videoWrapper.style.display = 'none';
+                }
+                return;
+            }
+
+            let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            timerElement.innerText = minutes + ':' + seconds;
+        };
+
+        const timerInterval = setInterval(updateTimer, 1000);
+        updateTimer();
+    }
+
 });
