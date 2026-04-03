@@ -25,34 +25,38 @@
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108225417', 'ym');
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })(window, document, 'script', 'https://mc.yandex.ru/metrika/tag.js?id=108225417', 'ym');
 
-        ym(108225417, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+        ym(108225417, 'init', { ssr: true, webvisor: true, clickmap: true, ecommerce: "dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce: true, trackLinks: true });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/108225417" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/108225417" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
 
     <!-- Meta Pixel Code -->
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1585447962566004');
-    fbq('track', 'PageView');
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1585447962566004');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1585447962566004&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=1585447962566004&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
 </head>
 
@@ -71,28 +75,36 @@
     </header>
 
     <!-- Бесплатный видеоурок (Бесплатная польза) -->
-    <section class="video-section section bg-accent-soft" style="padding: 15px 0 40px; min-height: 100vh; box-sizing: border-box;">
+    <section class="video-section section bg-accent-soft"
+        style="padding: 15px 0 40px; min-height: 100vh; box-sizing: border-box;">
         <div class="container fade-in-up">
-            <div id="video-timer" class="timer-container" style="text-align: center; max-width: 850px; margin: 0 auto 20px; font-weight: bold; font-size: 1.1rem; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: #d32f2f; border: 1px solid #ffcdd2;">
+            <div id="video-timer" class="timer-container"
+                style="text-align: center; max-width: 850px; margin: 0 auto 20px; font-weight: bold; font-size: 1.1rem; background: #fff; padding: 12px 15px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); color: #d32f2f; border: 1px solid #ffcdd2;">
                 ⏳ У тебя есть <span id="timer-time">30:00</span> минут, чтобы посмотреть это видео
             </div>
 
-            <div class="text-center" style="margin-bottom: 20px; font-size: clamp(13.5px, 3.9vw, 1.1rem); letter-spacing: -0.02em; line-height: 1.35; color: var(--clr-text-main);">
-                <p style="margin-bottom: 10px; font-weight: 600;">Даже при внешнем благополучии внутри может сохраняться ощущение пустоты</p>
-                <p style="margin-bottom: 15px;">В бесплатной лекции — причины этого состояния и способ изменить его за 7 дней.</p>
+            <div class="text-center"
+                style="margin-bottom: 20px; font-size: clamp(13.5px, 3.9vw, 1.1rem); letter-spacing: -0.02em; line-height: 1.35; color: var(--clr-text-main);">
+                <p style="margin-bottom: 10px; font-weight: 600;">Даже при внешнем благополучии внутри может сохраняться
+                    ощущение пустоты</p>
+                <p style="margin-bottom: 15px;">В бесплатной лекции — причины этого состояния и способ изменить его за 7
+                    дней.</p>
                 <h3 style="font-size: clamp(16px, 4.5vw, 1.3rem); font-weight: 700;">▶️ Начни с этого видео</h3>
             </div>
 
-            <div class="video-wrapper" style="max-width: 850px; margin: 0 auto; position: relative; padding-bottom: 0; height: auto; aspect-ratio: 16/9;">
+            <div class="video-wrapper"
+                style="max-width: 850px; margin: 0 auto; position: relative; padding-bottom: 0; height: auto; aspect-ratio: 16/9;">
                 <!-- Вставьте вашу ссылку на Vimeo -->
-                <iframe src="https://player.vimeo.com/video/1173294646" width="100%" height="100%"
+                <iframe src="https://player.vimeo.com/video/1179851098" width="100%" height="100%"
                     title="Vimeo video player" frameborder="0" loading="lazy"
                     allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div id="delayed-button-wrapper" class="text-center" style="margin-top: 25px; display: none;">
                 <a href="https://t.me/rusovmasteryfree_bot?start=POkGe3VBprH9cGsg8TNPSXfVTQl6iPcP" target="_blank"
-                    class="btn btn-primary pulse-btn" style="white-space: nowrap; font-size: clamp(12px, 3.5vw, 1.1rem); padding: 16px clamp(10px, 4vw, 36px);">👉 Присоединиться к обучению за 10 €</a>
+                    class="btn btn-primary pulse-btn"
+                    style="white-space: nowrap; font-size: clamp(12px, 3.5vw, 1.1rem); padding: 16px clamp(10px, 4vw, 36px);">👉
+                    Присоединиться к обучению за 10 €</a>
             </div>
         </div>
     </section>
