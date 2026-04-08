@@ -157,13 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /* --- 6. Таймер обратного отсчета для видео --- */
     const timerElement = document.getElementById('timer-time');
     if (timerElement) {
-        const THIRTY_MINUTES = 30 * 60 * 1000;
-        let endTime = localStorage.getItem('videoTimerEndTime');
+        const TEN_MINUTES = 10 * 60 * 1000;
+        let endTime = localStorage.getItem('videoTimerEndTime10');
         const now = new Date().getTime();
 
         if (!endTime || now > parseInt(endTime)) {
-            endTime = now + THIRTY_MINUTES;
-            localStorage.setItem('videoTimerEndTime', endTime);
+            endTime = now + TEN_MINUTES;
+            localStorage.setItem('videoTimerEndTime10', endTime);
         }
 
         const updateTimer = () => {
@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const distance = parseInt(endTime) - currentTime;
 
             const delayedButtonWrapper = document.getElementById('delayed-button-wrapper');
-            // Показываем кнопку, если прошло 5 минут (осталось 25 минут или меньше)
-            if (delayedButtonWrapper && distance <= 25 * 60 * 1000) {
+            // Показываем кнопку, если на таймере 4:30 или меньше
+            if (delayedButtonWrapper && distance <= (4 * 60 + 30) * 1000) {
                 delayedButtonWrapper.style.display = 'block';
             }
 
